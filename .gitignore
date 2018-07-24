@@ -3,9 +3,11 @@
 #   ignore contents of temp and test folders
 
 
-test/**
+test*
+!test/
 
-tmp/**
+tmp*
+!tmp/
 
 
 .directory
