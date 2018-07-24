@@ -1,0 +1,17 @@
+#!/bin/bash
+
+scriptname=$1
+
+if [ -z $1 ]
+  then
+    echo "Enter script name: "
+    read scriptname
+fi
+
+cd ~/.bin
+
+echo -e "#"\!"/bin/bash\n\n" >> $scriptname
+
+chmod 700 $scriptname
+
+'nano' $scriptname

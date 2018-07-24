@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo Starting Xterm on tty7
+
+# start a detatched screen session to make it easier to monitor the X server
+
+screen -dmS startx-auto
+
+# stuff the command to start the X server into the screen session.
+# after the X server terminates, killgui will kill the xterm screen session if it is still open. then the startx screen session should terminate.
+
+screen -X -S startx-auto stuff 'startx -- tty7; killgui > /dev/null; exit\n'
+
+echo Done

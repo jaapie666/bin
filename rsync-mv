@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rsync -ahv --info=progress2  --remove-source-files $1 $2    &&  find $1 -depth -type d -empty -delete
+
+

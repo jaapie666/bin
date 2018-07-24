@@ -1,0 +1,11 @@
+#   gitignore file for jaapie's bash scrips
+
+#   ignore contents of temp and test folders
+
+
+test/**
+
+tmp/**
+
+
+.directory

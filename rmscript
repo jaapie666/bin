@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ -z $1 ]
+  then
+    echo No script indicated
+    exit
+fi
+
+cd ~/.bin
+
+if [ -f $1 ]
+  then
+    echo "Delete script "\""$1"\""? (y/n)"
+    read choice
+
+    if [[ $choice == "y" || $choice == "Y" ]]
+      then
+      rm $1
+      echo "Script deleted!"
+      exit
+   fi
+
+  echo "Script not deleted!"
+  exit
+fi
+
+echo "Could not find script called $1 in "\""~/.bin"\""!"
+

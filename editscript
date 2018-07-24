@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ -z $1 ]
+  then
+    echo "No script indicated!"
+    exit
+fi
+
+cd .bin
+
+if [ -f $1 ]
+  then
+  'nano' $1
+  exit
+
+fi
+
+echo "No script found!"

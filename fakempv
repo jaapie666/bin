@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo $1 >> ~/vidurls
+echo done
+exit 1

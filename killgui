@@ -1,0 +1,4 @@
+#!/bin/bash
+
+screen -X -S xterm quit
+screen -X -S startx-auto quit > /dev/null

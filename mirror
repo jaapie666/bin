@@ -1,0 +1,3 @@
+#! /bin/bash
+
+wget "$1" --mirror --user-agent="" -e robots=off -np  --directory-prefix /home/jaapie/web-archives/ --warc-file="$2" --no-warc-compression

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z $1 ]
+  then
+    echo "No input!"
+    exit
+fi
+
+echo "Checking for file..."
+
+filename=$1
+
+if [ -f $filename ]
+  then
+    echo "File found!"
+    exit
+fi
+
+echo "File Not Found!"

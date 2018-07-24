@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo
+
+echo "Install Webmin?(y/n)"
+read choice
+
+if [[ $choice != "y" && $choice != "Y" ]]
+  then
+    echo Aborted
+    exit
+fi
+
+
+echo "Adding Webmin repository to sources.list..."
+
+cd /etc/apt
+echo -e "\n\n#webmin repository\n" >> sources.list
+echo -e "deb http://download.webmin.com/download/repository sarge contrib " >> sources.list
+
+echo "done"
+echo "Downloading GPG key..."
+
+cd /root
+
+wget -q -O - http://www.webmin.com/jcameron-key.asc | apt-key add -
+
+echo "Done"
+
+echo Installing Webmin
+
+apt-get update
+
+apt-get install -y apt-transport-https
+
+apt-get install -y webmin
+
+echo
+echo Done!
+exit 1
+

@@ -1,0 +1,3 @@
+#! /bin/bash
+
+wget -mpck --user-agent="" -e robots=off -np  $1

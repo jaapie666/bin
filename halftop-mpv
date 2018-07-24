@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh -f jaapie@halftop 'mpv -fs $1'

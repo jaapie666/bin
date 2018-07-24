@@ -1,0 +1,16 @@
+#!/bin/bash
+#taken from https://web.archive.org/web/20180608081544/https://stackoverflow.com/questions/762348/how-can-i-exclude-all-permission-denied-messages-from-find
+#
+#   find . 2>&1 >files_and_folders | { grep -v 'Permission denied' >&2; [ $? -eq 1 ]; }
+                      
+# syntax:   qfind [location] [name]
+#           qfind     $1       $2
+
+#   THIS WORKS
+#   -->    find $1 -name "$2"  2>&1                    | { grep -v 'Permission denied' >&2; [ $? -eq 1 ]; }
+
+
+
+
+#   find .              2>&1 >files_and_folders | { grep -v 'Permission denied' >&2; [ $? -eq 1 ]; }
+    find $1 -name "$2"  2>&1                    | { grep -v 'find: ' >&2; [ $? -eq 1 ]; }

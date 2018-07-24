@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec mpv  --profile=pseudo-gui http://mediaserver.wuncfm.unc.edu:8000/wunc128.m3u &

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pyriscope -cr $(echo $1 | sed 's/pscp/periscope/g')
+
